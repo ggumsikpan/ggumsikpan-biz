@@ -397,6 +397,100 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 .is-no .position-list li::before { content: "✗"; color: var(--danger); opacity: 0.7; }
 
+/* ===== OPERATOR (credibility) ===== */
+.operator { background: var(--panel); }
+.op-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+@media (max-width: 900px) { .op-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+.op-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 32px;
+  position: sticky;
+  top: 90px;
+}
+@media (max-width: 900px) { .op-card { position: static; } }
+
+.op-mono {
+  width: 96px; height: 96px;
+  border-radius: 8px;
+  background: linear-gradient(150deg, var(--orange) 0%, var(--orange-deep) 100%);
+  display: grid; place-items: center;
+  font-family: var(--font-serif);
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--paper);
+  margin-bottom: 24px;
+  box-shadow: 0 14px 28px -14px rgba(196,87,26,0.5);
+}
+.op-card-name {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.op-card-role {
+  font-size: 14px;
+  color: var(--gold-deep);
+  font-weight: 600;
+  margin-bottom: 24px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+.op-card-credits {
+  display: flex; flex-direction: column; gap: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+.op-card-credits li {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 12px;
+  font-size: 14px;
+  align-items: baseline;
+}
+.op-card-credits li span:first-child {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.op-card-credits li a:hover { color: var(--orange); text-decoration: underline; }
+
+.op-narrative {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--charcoal-soft);
+}
+.op-narrative p { margin: 0 0 22px; }
+.op-narrative strong { color: var(--ink); font-weight: 700; }
+.op-quote {
+  font-family: var(--font-serif);
+  font-size: 24px !important;
+  line-height: 1.55 !important;
+  color: var(--ink) !important;
+  border-left: 3px solid var(--orange);
+  padding: 6px 0 6px 24px;
+  margin: 0 0 32px !important;
+}
+.op-quote strong { color: var(--orange-deep); }
+.op-meta {
+  font-size: 14px !important;
+  color: var(--muted) !important;
+  font-family: var(--font-mono);
+  padding-top: 18px;
+  border-top: 1px dashed var(--line);
+  line-height: 1.7 !important;
+}
+
 /* ===== FEATURES (9 cards grid) ===== */
 .feat-grid {
   display: grid;
