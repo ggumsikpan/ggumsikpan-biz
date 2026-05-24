@@ -343,9 +343,14 @@ a { color: inherit; text-decoration: none; }
 /* ─── OFFER ────────────────────────────────────────────────────────── */
 .offer-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
+.offer-card.offer-card-feature {
+  border-color: var(--orange);
+  background: var(--orange-pale);
+}
+.offer-card.offer-card-feature .offer-name { color: var(--orange-deep); }
 .offer-card {
   background: var(--cream);
   border: 1px solid var(--gray-line);
@@ -538,7 +543,7 @@ a { color: inherit; text-decoration: none; }
   .topnav { display: none; }
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
   .position-grid { grid-template-columns: 1fr; }
-  .offer-grid { grid-template-columns: repeat(2, 1fr); }
+  .offer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .operator-grid { grid-template-columns: 1fr; }
   .flow-pipeline { flex-direction: column; }
   .flow-arrow { transform: rotate(90deg); padding: 4px 0; }
