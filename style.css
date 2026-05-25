@@ -482,6 +482,16 @@ a { color: inherit; text-decoration: none; }
   display: flex; gap: 14px; justify-content: center;
   margin: 40px 0 56px; flex-wrap: wrap;
 }
+/* contact 섹션은 밝은 배경 — btn-ghost를 오렌지 톤으로 변형 */
+.contact-cta-row .btn-ghost {
+  color: var(--orange-deep);
+  border-color: var(--orange);
+}
+.contact-cta-row .btn-ghost:hover {
+  background: var(--orange-pale);
+  border-color: var(--orange-deep);
+  color: var(--orange-deep);
+}
 .contact-info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
